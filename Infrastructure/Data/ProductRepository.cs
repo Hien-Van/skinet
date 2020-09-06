@@ -21,7 +21,7 @@ namespace Infrastructure.Data
             .Include(p => p.ProductType)
             .FirstOrDefaultAsync(p => p.Id == id);
         }
-
+ 
         public async Task<IReadOnlyList<Product>> GetProductsAsync()
         {
             return await _storeContext.Products
